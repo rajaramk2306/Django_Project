@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+  <title>You Are Listening To {{ music1.name }}</title>
+  <link rel="shortcut icon" href="{{music1.image}}" class="rounded-circle" type="image/jpg">
+</head>
+<br>
+<br>
+<main role="main">
+    <div class="container">
+      <div class="col-md-3">
+        <img src="{{music1.image}}" alt="{{ music1.name }}" class = "rounded">
+      </div>
+      <h1 class="display-3">{{music1.name}}</h1>
+      <h4>Movie: {{music1.movie_album_name}}</h4>
+      <p>{{ music1.desc }}</p>
+      <audio src="{{music1.audio}}" controls></audio>
+    </div>
+</main>
+{% endblock %}

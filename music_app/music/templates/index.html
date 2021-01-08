@@ -1,0 +1,25 @@
+<head><title>Home</title>
+    <link rel="icon" href="icon.png" type="image/png"></head>
+  {% extends 'base.html' %}
+  {% block content %}
+  <br>
+  <div class="main">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3>New Releasess</h3>
+        </div>
+        {% for music in music %}
+              <div class="col-md-3">
+                  <a href="javascript:void();" class="album-poster" data-switch="{{music.id}}">
+                      <img src="{{ music.image }}" alt="{{ music.name }}">
+                  </a>
+                  <h4>{{ music.name }}</h4>
+                  <p>{{music.movie_album_name}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  {% endblock %}

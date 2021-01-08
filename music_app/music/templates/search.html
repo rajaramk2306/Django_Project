@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<head><title>You Searched For {{ search.title }}</title></head>
+
+{% for result in result %}
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>You Searched For <kbd>{{ search.title }}</kbd> </h3>
+      </div>
+			<div class="col-md-3">
+				<a href="/music/{{ result.id }}" class="album-poster">
+					<img src="{{ result.image }}" alt="{{ result.name }}">
+				</a>
+				<h4>{{ result.name }}</h4>
+				<p>{{ result.movie_album_name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
